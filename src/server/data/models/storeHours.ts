@@ -14,7 +14,7 @@ export class StoreHours extends BaseModel {
   @Column({ type: 'time' })
   to: string;
 
-  @ManyToOne((type) => Store, (store) => store.hours)
+  @ManyToOne(() => Store, (store) => store.hours)
   @JoinColumn({ name: 'store_id' })
   store: Store;
 

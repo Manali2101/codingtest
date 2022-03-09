@@ -33,6 +33,6 @@ export class Store extends BaseModel {
   @Column({ name: 'sort_order', type: 'int', nullable: true })
   sortOrder: number;
 
-  @OneToMany((type) => StoreHours, (hours) => hours.store)
+  @OneToMany(() => StoreHours, (hours) => hours.store)
   hours: StoreHours[];
 }
